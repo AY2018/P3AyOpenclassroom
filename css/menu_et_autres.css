@@ -1,0 +1,212 @@
+/* PAGE MENU */
+
+/* HEADER */
+
+header {
+  position: relative;
+}
+
+header .fa-arrow-left {
+  font-size: 1.8em;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+/* MENU */
+
+.background_img {
+  height: 40vh;
+}
+
+.background_img img {
+  height: 100%;
+}
+
+.menu {
+  background-color: #e6e6e6;
+  border-radius: 50px 50px 0px 0px;
+  padding: 40px 30px;
+  width: 100%;
+  position: relative;
+  top: -50px;
+  margin-bottom: -50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu_title i {
+  font-size: 1.8em;
+}
+
+.menu_title h1 {
+  font-size: 2em;
+  font-family: "Shrikhand", Arial;
+}
+
+.menu h2 {
+  font-weight: 100;
+  position: relative;
+  margin-top: 50px;
+}
+
+.menu h2::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #18e4b4;
+  bottom: -5px;
+  left: 0;
+}
+
+.menu_carte {
+  margin-top: 20px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 2px 2px 10px lightgray;
+  padding: 15px;
+  position: relative;
+  cursor: pointer;
+  animation: itemAppear 0.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* ANIMATION CARTES APPEAR */
+
+@keyframes itemAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.item2 {
+  animation-delay: 0.5s;
+}
+.item3 {
+  animation-delay: 1s;
+}
+.item4 {
+  animation-delay: 1.5s;
+}
+
+/* INTERIEUR DE LA CARTE */
+
+.menu_carte h3 {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menu_paragraph {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menu_carte p {
+  font-size: 1.1em;
+  font-weight: 100;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* MENU CARTE - PRIX QUI SE DECALE ANIMATION */
+.menu_carte .prix {
+  font-weight: bold;
+  transition: transform 0.5s ease-in;
+}
+
+.menu_carte:hover .prix {
+  font-weight: bold;
+  transform: translateX(-100px);
+}
+
+/* CHECK MARK ANIMATION */
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #18e4b4;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  border-radius: 0 20px 20px 0;
+  margin-right: -100px;
+  transition: transform 0.5s ease-in;
+}
+
+.menu_carte:hover .check {
+  transform: translateX(-100px);
+  animation-fill-mode: forwards;
+}
+
+.check .fa-circle-check {
+  color: white;
+  font-size: 2em;
+  transform: rotate(-180deg);
+  transition-duration: 0.2s;
+  transition-delay: 0.4s;
+}
+
+.menu_carte:hover .fa-circle-check {
+  transform: rotate(0);
+}
+
+/* BUTTON */
+
+.menu .btn {
+  padding: 20px 70px;
+}
+
+.partie4 {
+  margin: 100px;
+  align-self: center;
+}
+
+/* MEDIA QUERIES */
+
+/*  PC  */
+
+@media (min-width: 992px) {
+  .menu__parties {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .partie {
+    width: 31%;
+  }
+
+  .check {
+    width: 60px;
+  }
+
+  .menu_carte:hover .prix {
+    transform: translateX(-50px);
+  }
+}
